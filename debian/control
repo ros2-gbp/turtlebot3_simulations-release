@@ -1,0 +1,12 @@
+Source: ros-dashing-turtlebot3-gazebo
+Section: misc
+Priority: extra
+Maintainer: Pyo <pyo@robotis.com>
+Build-Depends: debhelper (>= 9.0.0), ros-dashing-ament-cmake, ros-dashing-ros-workspace
+Homepage: http://wiki.ros.org/turtlebot3_gazebo
+Standards-Version: 3.9.2
+
+Package: ros-dashing-turtlebot3-gazebo
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-dashing-gazebo-ros-pkgs, ros-dashing-turtlebot3-description, ros-dashing-ros-workspace
+Description: Gazebo simulation package for the TurtleBot3
