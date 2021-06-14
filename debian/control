@@ -1,0 +1,12 @@
+Source: ros-foxy-turtlebot3-gazebo
+Section: misc
+Priority: optional
+Maintainer: Will Son <willson@robotis.com>
+Build-Depends: debhelper (>= 9.0.0), ros-foxy-ament-cmake, ros-foxy-gazebo-ros-pkgs, ros-foxy-geometry-msgs, ros-foxy-nav-msgs, ros-foxy-rclcpp, ros-foxy-sensor-msgs, ros-foxy-tf2, ros-foxy-ros-workspace
+Homepage: http://turtlebot3.robotis.com
+Standards-Version: 3.9.2
+
+Package: ros-foxy-turtlebot3-gazebo
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-foxy-gazebo-ros-pkgs, ros-foxy-geometry-msgs, ros-foxy-nav-msgs, ros-foxy-rclcpp, ros-foxy-sensor-msgs, ros-foxy-tf2, ros-foxy-turtlebot3-description, ros-foxy-ros-workspace
+Description: Gazebo simulation package for the TurtleBot3
