@@ -1,23 +1,23 @@
-name: foxy-devel
+name: galactic-devel
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 on:
   push:
-    branches: [ foxy-devel ]
+    branches: [ galactic-devel ]
   pull_request:
-    branches: [ foxy-devel ]
+    branches: [ galactic-devel ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  foxy-devel-ci:
+  galactic-devel-ci:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         ros_distribution:
           # - dashing
-          - foxy
-          # - galactic
+          # - foxy
+          - galactic
           # - rolling
         include:
             # Dashing Diademata (May 2019 - May 2021)
@@ -25,13 +25,13 @@ jobs:
           #   ros_distribution: dashing
           #   ros_version: 2
             # Foxy Fitzroy (June 2020 - May 2023)
-          - docker_image: ubuntu:focal
-            ros_distribution: foxy
-            ros_version: 2
-            # Galactic Geochelone (May 2021)
           # - docker_image: ubuntu:focal
-          #   ros_distribution: galactic
+          #   ros_distribution: foxy
           #   ros_version: 2
+            # Galactic Geochelone (May 2021)
+          - docker_image: ubuntu:focal
+            ros_distribution: galactic
+            ros_version: 2
             # Rolling
           # - docker_image: ubuntu:focal
           #   ros_distribution: rolling
@@ -46,7 +46,7 @@ jobs:
         with:
           path: ros_ws/src
       - name: Setup ROS environment
-        uses: ros-tooling/setup-ros@0.1.2
+        uses: ros-tooling/setup-ros@0.2.1
         with:
           required-ros-distributions: ${{ matrix.ros_distribution }}
       - name: Build and Test
@@ -54,4 +54,4 @@ jobs:
         with:
           package-name: turtlebot3_simulations
           target-ros2-distro: ${{ matrix.ros_distribution }}
-          vcs-repo-file-url: "https://raw.githubusercontent.com/ROBOTIS-GIT/turtlebot3_simulations/foxy-devel/turtlebot3_simulations_ci.repos"
+          vcs-repo-file-url: "https://raw.githubusercontent.com/ROBOTIS-GIT/turtlebot3_simulations/galactic-devel/turtlebot3_simulations_ci.repos"
