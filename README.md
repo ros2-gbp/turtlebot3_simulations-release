@@ -1,3 +1,29 @@
+## turtlebot3_simulations (galactic) - 2.2.4-2
+
+The packages in the `turtlebot3_simulations` repository were released into the `galactic` distro by running `/usr/bin/bloom-release turtlebot3_simulations -t galactic -r galactic --edit` on `Tue, 27 Jul 2021 07:15:22 -0000`
+
+These packages were released:
+- `turtlebot3_fake_node`
+- `turtlebot3_gazebo`
+- `turtlebot3_simulations`
+
+Version of package(s) in repository `turtlebot3_simulations`:
+
+- upstream repository: https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+- release repository: https://github.com/robotis-ros2-release/turtlebot3_simulations-release.git
+- rosdistro version: `2.2.4-1`
+- old version: `2.2.4-1`
+- new version: `2.2.4-2`
+
+Versions of tools used:
+
+- bloom version: `0.10.7`
+- catkin_pkg version: `0.4.23`
+- rosdep version: `0.20.1`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## turtlebot3_simulations (galactic) - 2.2.4-1
 
 The packages in the `turtlebot3_simulations` repository were released into the `galactic` distro by running `/usr/bin/bloom-release turtlebot3_simulations -t galactic -r galactic --edit` on `Mon, 14 Jun 2021 04:09:04 -0000`
