@@ -12,6 +12,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+
   ament_lint_galactic:
     runs-on: ubuntu-20.04
     strategy:
@@ -28,3 +29,5 @@ jobs:
           linter: ${{ matrix.linter }}
           package-name: 
             turtlebot3_simulations
+            turtlebot3_fake_node
+            turtlebot3_gazebo
