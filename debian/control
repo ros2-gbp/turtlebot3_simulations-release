@@ -1,0 +1,12 @@
+Source: ros-rolling-turtlebot3-simulations
+Section: misc
+Priority: optional
+Maintainer: Will Son <willson@robotis.com>
+Build-Depends: debhelper (>= 9.0.0), ros-rolling-ament-cmake, ros-rolling-ros-workspace
+Homepage: http://turtlebot3.robotis.com
+Standards-Version: 3.9.2
+
+Package: ros-rolling-turtlebot3-simulations
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-rolling-turtlebot3-fake-node, ros-rolling-turtlebot3-gazebo, ros-rolling-ros-workspace
+Description: ROS 2 packages for TurtleBot3 simulations
