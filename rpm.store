@@ -1,1 +1,1 @@
-{"base": "8048363", "parent": "rpm/rolling/turtlebot3_fake_node", "previous": "6766e98", "trim": "", "trimbase": ""}
+{"base": "3bc5ccc", "parent": "rpm/humble/turtlebot3_fake_node", "previous": "ccab58c", "trim": "", "trimbase": ""}
