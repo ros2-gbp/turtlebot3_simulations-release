@@ -1,0 +1,12 @@
+Source: ros-iron-turtlebot3-gazebo
+Section: misc
+Priority: optional
+Maintainer: Will Son <willson@robotis.com>
+Build-Depends: debhelper (>= 9.0.0), ros-iron-ament-cmake, ros-iron-gazebo-ros-pkgs, ros-iron-geometry-msgs, ros-iron-nav-msgs, ros-iron-rclcpp, ros-iron-sensor-msgs, ros-iron-tf2, ros-iron-ros-workspace
+Homepage: http://turtlebot3.robotis.com
+Standards-Version: 3.9.2
+
+Package: ros-iron-turtlebot3-gazebo
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-iron-gazebo-ros-pkgs, ros-iron-geometry-msgs, ros-iron-nav-msgs, ros-iron-rclcpp, ros-iron-sensor-msgs, ros-iron-tf2, ros-iron-ros-workspace
+Description: Gazebo simulation package for the TurtleBot3
