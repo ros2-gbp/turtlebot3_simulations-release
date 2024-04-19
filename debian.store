@@ -1,1 +1,1 @@
-{"base": "2b769d1", "parent": "debian/rolling/turtlebot3_gazebo", "previous": "547ea73", "trim": "", "trimbase": ""}
+{"base": "10cac42", "parent": "debian/jazzy/turtlebot3_gazebo", "previous": "82cbbf0", "trim": "", "trimbase": ""}
