@@ -2,6 +2,17 @@
 Changelog for package turtlebot3_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.3.2 (2025-04-01)
+------------------
+* Added a plugin to Turtlebot3 House
+* Contributors: Hyungyu Kim
+
+2.3.1 (2025-03-25)
+------------------
+* Gazebo Sim update
+* Jazzy supprot: TurtleBot3 World, TurtleBot3 House
+* Contributors: Hyungyu Kim
+
 2.3.0 (2025-02-17)
 ------------------
 * Added multi-robot launch functionality
