@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 3.5)
 project(turtlebot3_gazebo)
 
 if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 14)
+  set(CMAKE_CXX_STANDARD 17)
 endif()
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
@@ -20,8 +20,7 @@ endif()
 # Find ament packages and libraries for ament and system dependencies
 ################################################################################
 find_package(ament_cmake REQUIRED)
-find_package(gazebo REQUIRED)
-find_package(gazebo_ros_pkgs REQUIRED)
+find_package(ros_gz_sim REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(rclcpp REQUIRED)
@@ -53,14 +52,20 @@ set(EXEC_NAME "turtlebot3_drive")
 add_executable(${EXEC_NAME} src/turtlebot3_drive.cpp)
 ament_target_dependencies(${EXEC_NAME} ${dependencies})
 
-add_library(obstacle1 SHARED models/turtlebot3_dqn_world/obstacle_plugin/obstacle1.cc)
-target_link_libraries(obstacle1 ${GAZEBO_LIBRARIES})
+# add_library(traffic_light_plugin SHARED src/traffic_light_plugin.cpp)
+# target_link_libraries(traffic_light_plugin ${GAZEBO_LIBRARIES})
 
-add_library(obstacle2 SHARED models/turtlebot3_dqn_world/obstacle_plugin/obstacle2.cc)
-target_link_libraries(obstacle2 ${GAZEBO_LIBRARIES})
+# add_library(traffic_bar_plugin SHARED src/traffic_bar_plugin.cpp)
+# target_link_libraries(traffic_bar_plugin ${GAZEBO_LIBRARIES})
 
-add_library(obstacles SHARED models/turtlebot3_dqn_world/obstacle_plugin/obstacles.cc)
-target_link_libraries(obstacles ${GAZEBO_LIBRARIES})
+# add_library(obstacle1 SHARED src/obstacle1.cpp)
+# target_link_libraries(obstacle1 ${GAZEBO_LIBRARIES})
+
+# add_library(obstacle2 SHARED src/obstacle2.cpp)
+# target_link_libraries(obstacle2 ${GAZEBO_LIBRARIES})
+
+# add_library(obstacles SHARED src/obstacles.cpp)
+# target_link_libraries(obstacles ${GAZEBO_LIBRARIES})
 
 ################################################################################
 # Install
@@ -69,7 +74,7 @@ install(TARGETS ${EXEC_NAME}
   DESTINATION lib/${PROJECT_NAME}
 )
 
-install(DIRECTORY launch models rviz urdf worlds
+install(DIRECTORY launch models params rviz urdf worlds
   DESTINATION share/${PROJECT_NAME}/
 )
 
