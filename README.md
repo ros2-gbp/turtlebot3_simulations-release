@@ -1,3 +1,29 @@
+## turtlebot3_simulations (humble) - 2.3.0-1
+
+The packages in the `turtlebot3_simulations` repository were released into the `humble` distro by running `/usr/bin/bloom-release turtlebot3_simulations -t humble -r humble --edit` on `Tue, 01 Apr 2025 08:53:20 -0000`
+
+These packages were released:
+- `turtlebot3_fake_node`
+- `turtlebot3_gazebo`
+- `turtlebot3_simulations`
+
+Version of package(s) in repository `turtlebot3_simulations`:
+
+- upstream repository: https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+- release repository: https://github.com/ros2-gbp/turtlebot3_simulations-release.git
+- rosdistro version: `2.2.5-3`
+- old version: `2.2.5-3`
+- new version: `2.3.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.25.1`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## turtlebot3_simulations (rolling) - 2.2.5-1
 
 The packages in the `turtlebot3_simulations` repository were released into the `rolling` distro by running `/usr/bin/bloom-release turtlebot3_simulations -t rolling -r rolling --edit` on `Wed, 25 Aug 2021 04:09:29 -0000`
