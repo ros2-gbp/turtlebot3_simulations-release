@@ -1,1 +1,1 @@
-{"base": "8785c5c", "parent": "debian/rolling/turtlebot3_fake_node", "previous": "91b4b12", "trim": "", "trimbase": ""}
+{"base": "b690d310f9ea", "parent": "debian/kilted/turtlebot3_fake_node", "previous": "976aa2e63799", "trim": "", "trimbase": ""}
