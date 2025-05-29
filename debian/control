@@ -1,0 +1,12 @@
+Source: ros-rolling-turtlebot3-gazebo
+Section: misc
+Priority: optional
+Maintainer: Pyo <pyo@robotis.com>
+Build-Depends: debhelper (>= 9.0.0), ros-rolling-ament-cmake, ros-rolling-geometry-msgs, ros-rolling-nav-msgs, ros-rolling-rclcpp, ros-rolling-ros-gz-bridge, ros-rolling-ros-gz-image, ros-rolling-ros-gz-sim, ros-rolling-sensor-msgs, ros-rolling-tf2, ros-rolling-ros-workspace
+Homepage: http://turtlebot3.robotis.com
+Standards-Version: 3.9.2
+
+Package: ros-rolling-turtlebot3-gazebo
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-rolling-geometry-msgs, ros-rolling-nav-msgs, ros-rolling-rclcpp, ros-rolling-ros-gz-bridge, ros-rolling-ros-gz-image, ros-rolling-ros-gz-sim, ros-rolling-sensor-msgs, ros-rolling-tf2, ros-rolling-ros-workspace
+Description: Gazebo simulation package for the TurtleBot3
