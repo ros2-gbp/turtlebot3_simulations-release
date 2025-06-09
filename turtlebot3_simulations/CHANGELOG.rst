@@ -2,21 +2,10 @@
 Changelog for package turtlebot3_simulations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.3.3 (2025-05-29)
+2.3.4 (2025-05-28)
 ------------------
-* Deprecate ament_include_dependency usage in CMakeLists.txt, related PR(https://github.com/ROBOTIS-GIT/turtlebot3_simulations/pull/234)
-* Contributor: ahcorde
-
-2.3.2 (2025-04-01)
-------------------
-* Added a plugin to Turtlebot3 House
-* Contributors: Hyungyu Kim
-
-2.3.1 (2025-03-25)
-------------------
-* Gazebo Sim update
-* Jazzy supprot: TurtleBot3 World, TurtleBot3 House
-* Contributors: Hyungyu Kim
+* Moved the TurtleBot3 Manipulation Gazebo simulation from the turtlebot3_manipulation_bringup package
+* Contributors: ChanHyeong Lee
 
 2.3.0 (2025-02-17)
 ------------------
