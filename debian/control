@@ -1,0 +1,12 @@
+Source: ros-jazzy-turtlebot3-gazebo
+Section: misc
+Priority: optional
+Maintainer: Pyo <pyo@robotis.com>
+Build-Depends: debhelper (>= 9.0.0), ros-jazzy-ament-cmake, ros-jazzy-geometry-msgs, ros-jazzy-gz-math-vendor, ros-jazzy-gz-plugin-vendor, ros-jazzy-gz-sim-vendor, ros-jazzy-nav-msgs, ros-jazzy-rclcpp, ros-jazzy-ros-gz-bridge, ros-jazzy-ros-gz-image, ros-jazzy-ros-gz-sim, ros-jazzy-sensor-msgs, ros-jazzy-tf2, ros-jazzy-ros-workspace
+Homepage: http://turtlebot3.robotis.com
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-turtlebot3-gazebo
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jazzy-geometry-msgs, ros-jazzy-gz-math-vendor, ros-jazzy-gz-plugin-vendor, ros-jazzy-gz-sim-vendor, ros-jazzy-nav-msgs, ros-jazzy-rclcpp, ros-jazzy-ros-gz-bridge, ros-jazzy-ros-gz-image, ros-jazzy-ros-gz-sim, ros-jazzy-sensor-msgs, ros-jazzy-tf2, ros-jazzy-ros-workspace
+Description: Gazebo simulation package for the TurtleBot3
