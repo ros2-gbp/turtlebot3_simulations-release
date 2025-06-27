@@ -2,6 +2,21 @@
 Changelog for package turtlebot3_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.3.7 (2025-06-27)
+------------------
+* Changed the header files in tf2/LinearMath from .h to .hpp
+* Contributors: Hyungyu Kim
+
+2.3.5 (2025-06-04)
+------------------
+* Added turtlebot3_machine_learning world and plugin
+* Contributors: ChanHyeong Lee
+
+2.3.3 (2025-05-29)
+------------------
+* Deprecate ament_include_dependency usage in CMakeLists.txt, related PR(https://github.com/ROBOTIS-GIT/turtlebot3_simulations/pull/234)
+* Contributor: ahcorde
+
 2.3.2 (2025-04-01)
 ------------------
 * Added a plugin to Turtlebot3 House
