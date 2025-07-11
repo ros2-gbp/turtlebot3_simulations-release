@@ -12,51 +12,27 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: Ryan Shim, ChanHyeong Lee
+// Author: Ryan Shim
 
 #ifndef TURTLEBOT3_GAZEBO__OBSTACLE1_HPP_
 #define TURTLEBOT3_GAZEBO__OBSTACLE1_HPP_
 
-#include <chrono>
-#include <memory>
-#include <vector>
+#include <ignition/math.hh>
+#include <gazebo/common/common.hh>
+#include <gazebo/gazebo.hh>
+#include <gazebo/physics/physics.hh>
 
-#include <gz/sim/System.hh>
-#include <gz/sim/Model.hh>
-#include <gz/math/Vector3.hh>
-
-namespace turtlebot3_gazebo
+namespace gazebo
 {
-
-class Obstacle1Plugin
-  : public gz::sim::System,
-  public gz::sim::ISystemConfigure,
-  public gz::sim::ISystemPreUpdate
+class Obstacle1 : public ModelPlugin
 {
 public:
-  Obstacle1Plugin() = default;
-  ~Obstacle1Plugin() override = default;
-
-  void Configure(
-    const gz::sim::Entity & entity,
-    const std::shared_ptr<const sdf::Element> & sdf,
-    gz::sim::EntityComponentManager & ecm,
-    gz::sim::EventManager & eventMgr) override;
-
-  void PreUpdate(
-    const gz::sim::UpdateInfo & info,
-    gz::sim::EntityComponentManager & ecm) override;
+  void Load(physics::ModelPtr _parent, sdf::ElementPtr /*_sdf*/) override;
 
 private:
-  gz::sim::Model model;
-  std::chrono::steady_clock::time_point startTime;
-
-  std::vector<gz::math::Vector3d> waypoints;
-  std::vector<double> segmentDistances;
-  double totalDistance = 0.0;
-  double speed = 0.1;  // meters per second
+  physics::ModelPtr model;
+  event::ConnectionPtr updateConnection;
 };
-
-}  // namespace turtlebot3_gazebo
-
+GZ_REGISTER_MODEL_PLUGIN(Obstacle1);
+}  // namespace gazebo
 #endif  // TURTLEBOT3_GAZEBO__OBSTACLE1_HPP_

@@ -12,44 +12,30 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: Ryan Shim, ChanHyeong Lee
+// Author: Ryan Shim
 
 #ifndef TURTLEBOT3_GAZEBO__OBSTACLES_HPP_
 #define TURTLEBOT3_GAZEBO__OBSTACLES_HPP_
 
-#include <chrono>
-#include <memory>
+#include <ignition/math.hh>
+#include <gazebo/common/common.hh>
+#include <gazebo/gazebo.hh>
+#include <gazebo/physics/physics.hh>
 
-#include <gz/sim/components/Pose.hh>
-#include <gz/sim/EntityComponentManager.hh>
-#include <gz/sim/EventManager.hh>
-#include <gz/sim/Model.hh>
-#include <gz/sim/System.hh>
+#define PI 3.141592
 
-namespace turtlebot3_gazebo
+namespace gazebo
 {
-
-class ObstaclesPlugin
-  : public gz::sim::System,
-  public gz::sim::ISystemConfigure,
-  public gz::sim::ISystemPreUpdate
+class Obstacles : public ModelPlugin
 {
 public:
-  void Configure(
-    const gz::sim::Entity & entity,
-    const std::shared_ptr<const sdf::Element> & sdf,
-    gz::sim::EntityComponentManager & ecm,
-    gz::sim::EventManager & eventMgr) override;
-
-  void PreUpdate(
-    const gz::sim::UpdateInfo & info,
-    gz::sim::EntityComponentManager & ecm) override;
+  Obstacles() = default;
+  void Load(physics::ModelPtr _parent, sdf::ElementPtr /*_sdf*/) override;
 
 private:
-  gz::sim::Model model{gz::sim::kNullEntity};
-  std::chrono::steady_clock::time_point startTime;
+  physics::ModelPtr model;
+  event::ConnectionPtr updateConnection;
 };
-
-}  // namespace turtlebot3_gazebo
-
+GZ_REGISTER_MODEL_PLUGIN(Obstacles);
+}  // namespace gazebo
 #endif  // TURTLEBOT3_GAZEBO__OBSTACLES_HPP_
