@@ -1,0 +1,21 @@
+ros-humble-turtlebot3-manipulation-gazebo (2.3.8-1jammy) jammy; urgency=high
+
+  * Fixed the issue where the TurtleBot3 Manipulation Gazebo simulation was not working properly
+  * Contributors: Hyungyu Kim
+
+ -- Pyo <pyo@robotis.com>  Wed, 09 Jul 2025 15:00:00 -0000
+
+ros-humble-turtlebot3-manipulation-gazebo (2.3.6-1jammy) jammy; urgency=high
+
+  * None
+
+ -- Pyo <pyo@robotis.com>  Wed, 18 Jun 2025 15:00:00 -0000
+
+ros-humble-turtlebot3-manipulation-gazebo (2.3.4-1jammy) jammy; urgency=high
+
+  * Moved the TurtleBot3 Manipulation Gazebo simulation from the turtlebot3_manipulation_bringup package
+  * Contributors: ChanHyeong Lee
+
+ -- Pyo <pyo@robotis.com>  Tue, 27 May 2025 15:00:00 -0000
+
+
