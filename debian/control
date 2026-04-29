@@ -1,0 +1,13 @@
+Source: ros-lyrical-turtlebot3-fake-node
+Section: misc
+Priority: optional
+Maintainer: Pyo <pyo@robotis.com>
+Build-Depends: debhelper (>= 9.0.0), ros-lyrical-ament-cmake, ros-lyrical-geometry-msgs, ros-lyrical-nav-msgs, ros-lyrical-rclcpp, ros-lyrical-sensor-msgs, ros-lyrical-tf2, ros-lyrical-tf2-msgs, ros-lyrical-turtlebot3-msgs, ros-lyrical-ros-workspace
+Homepage: http://turtlebot3.robotis.com
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-turtlebot3-fake-node
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-lyrical-ament-cmake, ros-lyrical-geometry-msgs, ros-lyrical-nav-msgs, ros-lyrical-rclcpp, ros-lyrical-robot-state-publisher, ros-lyrical-sensor-msgs, ros-lyrical-tf2, ros-lyrical-tf2-msgs, ros-lyrical-turtlebot3-msgs, ros-lyrical-ros-workspace
+Description: Package for TurtleBot3 fake node.
+ With this package, simple tests can be done without a robot. You can do simple tests using this package on rviz without real robots.
